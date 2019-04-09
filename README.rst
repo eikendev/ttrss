@@ -13,7 +13,7 @@ For a quick introduction, let me show how you would use the tool to get started.
 
 As can be seen above, you have to specify a directory where all unread articles will be saved in.
 Additionally, server information and login credentials must be provided.
-For now, be accessible through the `keyring` command line tool.
+For now, the only way of specifying a password is by using the `keyring` command line tool, which is passed the `--username` and the `--keyring-service`.
 
 Configuration
 =============
