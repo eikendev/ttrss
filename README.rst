@@ -1,3 +1,18 @@
+.. image:: https://img.shields.io/pypi/status/ttrss.svg
+   :target: https://pypi.org/project/ttrss/
+
+.. image:: https://img.shields.io/pypi/l/ttrss.svg
+   :target: https://pypi.org/project/ttrss/
+
+.. image:: https://img.shields.io/pypi/pyversions/ttrss.svg
+   :target: https://pypi.org/project/ttrss/
+
+.. image:: https://img.shields.io/pypi/v/ttrss.svg
+   :target: https://pypi.org/project/ttrss/
+
+.. image:: https://img.shields.io/pypi/dm/ttrss.svg
+   :target: https://pypi.org/project/ttrss/
+
 Installation
 ============
 
