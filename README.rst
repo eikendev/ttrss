@@ -1,3 +1,18 @@
+Installation
+============
+
+From PyPI
+---------
+::
+
+   pip install ttrss
+
+From Source
+-----------
+::
+
+   ./setup.py install
+
 Usage
 =====
 
