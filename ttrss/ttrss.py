@@ -1,6 +1,5 @@
 import keyring
 import logging
-import sys
 
 from functools import partial
 from pathlib import Path
@@ -9,22 +8,10 @@ from .arguments import parse_arguments
 from .client import TTRssClient
 from .config import load_config, get_default_config_file, get_root_dir
 from .exception import TTRssArgumentException, TTRssConfigurationException
+from .logging import setup_logger
 from .methods import synchronize
 
 logger = logging.getLogger("ttrss")
-
-
-def setup_logger(logger: logging.Logger) -> None:
-    fmt = '%(asctime)s [%(levelname)s] %(message)s'
-    datefmt = '%Y-%m-%d %H:%M:%S'
-    level = logging.INFO
-
-    formatter = logging.Formatter(fmt=fmt, datefmt=datefmt)
-    sh = logging.StreamHandler(sys.stdout)
-    sh.setFormatter(formatter)
-
-    logger.setLevel(level)
-    logger.addHandler(sh)
 
 
 def execute_method(method: str, path: Path, client: TTRssClient) -> None:
