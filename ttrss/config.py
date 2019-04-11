@@ -1,7 +1,7 @@
+import configparser
 import logging
 import os
 
-from configparser import ConfigParser
 from pathlib import Path
 
 from .exception import TTRssConfigurationException
@@ -10,35 +10,37 @@ logger = logging.getLogger("ttrss")
 
 
 def load_config(path):
-    config = ConfigParser(interpolation=None)
-    config.read(path)
+    msg = "Loading configuration '{}'."
+    logger.debug(msg.format(path))
+
+    config = configparser.ConfigParser(interpolation=None)
+
+    try:
+        config.read(path)
+    except configparser.Error:
+        msg = "Cannot load configuration '{}'."
+        logger.error(msg.format(path))
+        exit(1)
 
     return config
 
 
-def _get_config_base() -> Path:
-    default = '~/.config'
-    path = os.getenv('XDG_CONFIG_HOME', default)
+def get_default_config_file():
+    msg = 'Loading default configuration file.'
+    logger.debug(msg)
 
-    path = Path(path)
-    path = path.expanduser().resolve()
-
-    if not path.is_dir():
-        msg = 'Could not find configuration file.'
-        logger.error(msg)
-        exit(1)
-
-    return path
-
-
-def get_config_path() -> Path:
-    directory = 'ttrss'
+    subdirectory = 'ttrss'
     filename = 'config.ini'
 
-    base = _get_config_base()
-    path = base / directory / filename
+    base = '~/.config'
+    base = os.getenv('XDG_CONFIG_HOME', base)
+    base = Path(base)
+    base = base.expanduser()
+    base = base.resolve()
 
-    return path
+    config = base / subdirectory / filename
+
+    return config
 
 
 def get_root_dir(path: str) -> Path:
