@@ -14,7 +14,7 @@ def parse_arguments():
 
     parser = ArgumentParser(
         prog="ttrss",
-        description="A tool for accessing a ttrss instance."
+        description="A tool for synchronizing feeds from a Tiny Tiny RSS server."
     )
     parser.add_argument("method", type=str, choices=method_choices,
                         help="Method to run.")

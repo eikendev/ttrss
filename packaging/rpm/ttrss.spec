@@ -4,7 +4,7 @@
 Name:           %{srcname}
 Version:        1.1.1
 Release:        1%{?dist}
-Summary:        A tool for accessing a ttrss instance
+Summary:        A tool for synchronizing feeds from a Tiny Tiny RSS server
 License:        MIT
 URL:            https://pypi.python.org/pypi/%{srcname}
 #Source0:        %%pypi_source

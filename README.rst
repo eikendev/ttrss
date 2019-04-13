@@ -16,8 +16,7 @@
 Usage
 =====
 
-This tool can be used to interact with a `Tiny Tiny RSS <https://tt-rss.org/>`_ server through the command line.
-The main purpose of ``ttrss`` is to download the unread articles to the local machine.
+This tool can be used to synchronize feeds from a `Tiny Tiny RSS <https://tt-rss.org/>`_ server.
 If you're a bit like me and prefer reading your feeds through the browser, you'll sure have been in the situation of not being able to access your feeds due to the lack of an internet connection.
 ``ttrss`` will help you to read articles offline in a very simple manner.
 
