@@ -57,3 +57,12 @@ Alternatively, the path to the configuration file can be set via the ``--config-
     Url = https://ttrss.example.com/
     Username = example
     KeyringService = ttrss.example.com
+
+Development
+===========
+
+The source code is located on `GitHub <https://github.com/eikendev/ttrss>`_.
+To check out the repository, the following command can be used.
+::
+
+   git clone https://github.com/eikendev/ttrss.git
