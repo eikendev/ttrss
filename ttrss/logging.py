@@ -8,7 +8,7 @@ def setup_logger(logger: logging.Logger) -> None:
     level = logging.INFO
 
     formatter = logging.Formatter(fmt=fmt, datefmt=datefmt)
-    sh = logging.StreamHandler(sys.stdout)
+    sh = logging.StreamHandler(sys.stderr)
     sh.setFormatter(formatter)
 
     logger.setLevel(level)
