@@ -75,7 +75,7 @@ def synchronize(client: TTRssClient, path: Path) -> None:
     for a_id in to_add:
         article = articles[a_id]
 
-        a_path = article.build_filename()
+        a_path = article.build_filename(path)
         a_path = path / a_path
 
         if a_path.exists():
@@ -91,7 +91,7 @@ def synchronize(client: TTRssClient, path: Path) -> None:
                 f.write(content)
 
     def build_index_line(article: TTRssArticle) -> str:
-        a_path = article.build_filename()
+        a_path = article.build_filename(path)
 
         line = "{},{}\n"
         line = line.format(article.id, a_path)
