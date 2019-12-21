@@ -3,7 +3,7 @@
 
 Name:           %{srcname}
 Version:        1.1.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A tool for synchronizing feeds from a Tiny Tiny RSS server
 License:        MIT
 URL:            https://pypi.python.org/pypi/%{srcname}
