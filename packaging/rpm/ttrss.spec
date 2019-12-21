@@ -2,7 +2,7 @@
 %global srcname ttrss
 
 Name:           %{srcname}
-Version:        1.1.1
+Version:        1.1.4
 Release:        1%{?dist}
 Summary:        A tool for synchronizing feeds from a Tiny Tiny RSS server
 License:        MIT
@@ -37,5 +37,8 @@ Requires:       %{pythonv}-requests
 %{python3_sitelib}/*
 
 %changelog
+* Sat Dec 21 2019 eikendev <raphael@eiken.dev> - 1.1.4-1
+- Update to 1.1.4
+
 * Sat Apr 13 2019 eikendev <raphael@eiken.dev> - 1.1.1-1
 - Initial package
