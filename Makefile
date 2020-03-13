@@ -26,7 +26,12 @@ test:
 
 .PHONY: tags
 tags:
-	ctags -R --extra=+f ${DIR_SRC}
+	ctags -R \
+		--sort=yes \
+		--totals=yes \
+		--languages=Python \
+		--extra=+f \
+		${DIR_SRC}
 
 .PHONY: flake
 flake:

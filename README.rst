@@ -1,16 +1,25 @@
-.. image:: https://img.shields.io/pypi/status/ttrss.svg
+.. image:: https://img.shields.io/travis/eikendev/ttrss/master
+   :alt: Build status
+   :target: https://travis-ci.org/github/eikendev/ttrss/builds/
+
+.. image:: https://img.shields.io/pypi/status/ttrss
+   :alt: Development status
    :target: https://pypi.org/project/ttrss/
 
-.. image:: https://img.shields.io/pypi/l/ttrss.svg
+.. image:: https://img.shields.io/pypi/l/ttrss
+   :alt: License
    :target: https://pypi.org/project/ttrss/
 
-.. image:: https://img.shields.io/pypi/pyversions/ttrss.svg
+.. image:: https://img.shields.io/pypi/pyversions/ttrss
+   :alt: Python version
    :target: https://pypi.org/project/ttrss/
 
-.. image:: https://img.shields.io/pypi/v/ttrss.svg
+.. image:: https://img.shields.io/pypi/v/ttrss
+   :alt: Version
    :target: https://pypi.org/project/ttrss/
 
-.. image:: https://img.shields.io/pypi/dm/ttrss.svg
+.. image:: https://img.shields.io/pypi/dm/ttrss
+   :alt: Downloads
    :target: https://pypi.org/project/ttrss/
 
 Usage
