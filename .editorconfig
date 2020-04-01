@@ -7,11 +7,14 @@ insert_final_newline = true
 indent_style = space
 trim_trailing_whitespace = true
 
+[*.md]
+trim_trailing_whitespace = false
+
 [*.py]
 indent_size = 4
 
-[*.md]
-trim_trailing_whitespace = false
+[*.{yml,yaml}]
+indent_style = space
 
 [Makefile]
 indent_style = tab
