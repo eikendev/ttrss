@@ -1,26 +1,26 @@
 .. image:: https://img.shields.io/travis/eikendev/ttrss/master
-   :alt: Build status
-   :target: https://travis-ci.org/github/eikendev/ttrss/builds/
+    :alt: Build status
+    :target: https://travis-ci.org/github/eikendev/ttrss/builds/
 
 .. image:: https://img.shields.io/pypi/status/ttrss
-   :alt: Development status
-   :target: https://pypi.org/project/ttrss/
+    :alt: Development status
+    :target: https://pypi.org/project/ttrss/
 
 .. image:: https://img.shields.io/pypi/l/ttrss
-   :alt: License
-   :target: https://pypi.org/project/ttrss/
+    :alt: License
+    :target: https://pypi.org/project/ttrss/
 
 .. image:: https://img.shields.io/pypi/pyversions/ttrss
-   :alt: Python version
-   :target: https://pypi.org/project/ttrss/
+    :alt: Python version
+    :target: https://pypi.org/project/ttrss/
 
 .. image:: https://img.shields.io/pypi/v/ttrss
-   :alt: Version
-   :target: https://pypi.org/project/ttrss/
+    :alt: Version
+    :target: https://pypi.org/project/ttrss/
 
 .. image:: https://img.shields.io/pypi/dm/ttrss
-   :alt: Downloads
-   :target: https://pypi.org/project/ttrss/
+    :alt: Downloads
+    :target: https://pypi.org/project/ttrss/
 
 Usage
 =====
@@ -30,9 +30,10 @@ If you're a bit like me and prefer reading your feeds through the browser, you'l
 ``ttrss`` will help you to read articles offline in a very simple manner.
 
 For a quick introduction, let me show how you would use the tool to get started.
-::
 
-    $ ttrss synchronize -d ~/news/ --url https://ttrss.example.com/ --username example --keyring-service ttrss.example.com
+.. code:: bash
+
+    ttrss synchronize -d ~/news/ --url https://ttrss.example.com/ --username example --keyring-service ttrss.example.com
 
 As can be seen above, you have to specify a directory where all unread articles will be saved in.
 Additionally, server information and login credentials must be provided.
@@ -43,15 +44,25 @@ Installation
 
 From PyPI
 ---------
-::
 
-   pip install ttrss
+.. code:: bash
+
+    pip install ttrss
 
 From Source
 -----------
-::
 
-   ./setup.py install
+.. code:: bash
+
+    ./setup.py install
+
+Fedora
+------
+
+.. code:: bash
+
+    sudo dnf copr enable eikendev/ttrss
+    sudo dnf install ttrss
 
 Configuration
 =============
@@ -59,7 +70,8 @@ Configuration
 A configuration file can be saved to ``~/.config/ttrss/config.ini`` to avoid specifying the path and other information for each invocation.
 Of course, ``$XDG_CONFIG_HOME`` can be set to change your configuration path.
 Alternatively, the path to the configuration file can be set via the ``--config-file`` argument.
-::
+
+.. code:: ini
 
     [GENERAL]
     RootDir = ~/news/
@@ -72,6 +84,7 @@ Development
 
 The source code is located on `GitHub <https://github.com/eikendev/ttrss>`_.
 To check out the repository, the following command can be used.
-::
 
-   git clone https://github.com/eikendev/ttrss.git
+.. code:: bash
+
+    git clone https://github.com/eikendev/ttrss.git
