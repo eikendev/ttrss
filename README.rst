@@ -62,7 +62,7 @@ Fedora
 .. code:: bash
 
     sudo dnf copr enable eikendev/ttrss
-    sudo dnf install ttrss
+    sudo dnf install python3-ttrss
 
 Configuration
 =============
