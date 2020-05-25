@@ -32,7 +32,7 @@ def synchronize(client: TTRssClient, path: Path) -> None:
             with open(indexfile, 'r') as f:
                 local = f.readlines()
 
-            local = [line_to_id(l) for l in local]
+            local = [line_to_id(line) for line in local]
             local = set(local)
 
     articles = client.get_unread_articles()
