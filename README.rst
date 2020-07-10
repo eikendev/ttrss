@@ -1,6 +1,6 @@
 .. image:: https://img.shields.io/travis/eikendev/ttrss/master
     :alt: Build status
-    :target: https://travis-ci.org/github/eikendev/ttrss/builds/
+    :target: https://travis-ci.com/github/eikendev/ttrss/builds/
 
 .. image:: https://img.shields.io/pypi/status/ttrss
     :alt: Development status
