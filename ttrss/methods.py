@@ -2,6 +2,7 @@ import logging
 import re
 
 from pathlib import Path
+from typing import Set
 
 from .article import TTRssArticle
 from .client import TTRssClient
@@ -13,12 +14,17 @@ logger = logging.getLogger("ttrss")
 def synchronize(client: TTRssClient, path: Path) -> None:
     logger.debug('Synchronizing unread feeds.')
 
-    local = set()
+    local: Set[int] = set()
     indexfile = path / '.index'
     countfile = path / '.count'
 
-    def line_to_id(line: str) -> str:
+    def line_to_id(line: str) -> int:
         line = re.match(r'(\d+),.*', line)
+
+        if line is None:
+            msg = 'Invalid server response.'
+            raise TTRssException(msg)
+
         line = line.group(1)
         line = int(line)
 
@@ -28,12 +34,12 @@ def synchronize(client: TTRssClient, path: Path) -> None:
         if not indexfile.is_file():
             msg = 'Cannot create index file.'
             raise TTRssException(msg)
-        else:
-            with open(indexfile, 'r') as f:
-                local = f.readlines()
 
-            local = [line_to_id(line) for line in local]
-            local = set(local)
+        with open(indexfile, 'r') as f:
+            ids = f.readlines()
+            ids = [line_to_id(line) for line in ids]
+
+        local = local.union(ids)
 
     articles = client.get_unread_articles()
     articles = {a.id: a for a in articles}

@@ -1,11 +1,11 @@
 os: linux
 language: python
 python:
-- '3.6'
+  - "3.8"
 install:
-- pip install -r requirements-dev.txt
+  - make setup
 script:
-- make flake
+  - make test
 deploy:
   provider: pypi
   user: __token__

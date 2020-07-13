@@ -14,8 +14,8 @@ from .methods import synchronize
 logger = logging.getLogger("ttrss")
 
 
-def execute_method(method: str, path: Path, client: TTRssClient) -> None:
-    msg = "Executing method: '{}'.".format(method)
+def execute_method(method_name: str, path: Path, client: TTRssClient) -> None:
+    msg = "Executing method: '{}'.".format(method_name)
     logger.debug(msg)
 
     methods = {
@@ -23,7 +23,7 @@ def execute_method(method: str, path: Path, client: TTRssClient) -> None:
     }
 
     try:
-        method = methods[method]
+        method = methods[method_name]
     except KeyError:
         logger.error('Method does not exist.')
         exit(1)

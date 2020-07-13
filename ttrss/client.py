@@ -22,7 +22,7 @@ class TTRssClient:
         self.login()
         return self
 
-    def __exit__(self, type, value, traceback):
+    def __exit__(self, _type, _value, _traceback):
         self.logout()
 
     def _perform_json_request(self, data, retries=5):
@@ -75,19 +75,6 @@ class TTRssClient:
         data = self._perform_json_request(data)
 
         self.session_id = None
-
-    def get_unread_count(self):
-        if self.session_id is None:
-            raise TTRssException('Client is missing session_id.')
-
-        data = dict(
-            op='getUnread',
-            sid=self.session_id,
-        )
-        data = self._perform_json_request(data)
-        unread = data['content']['unread']
-
-        return unread
 
     def get_unread_articles(self):
         if self.session_id is None:
