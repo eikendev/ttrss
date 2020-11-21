@@ -1,6 +1,6 @@
-.. image:: https://img.shields.io/github/workflow/status/ttrss/rfcdl/Main
+.. image:: https://img.shields.io/github/workflow/status/eikendev/ttrss/Main
     :alt: Build status
-    :target: https://github.com/ttrss/rfcdl/actions
+    :target: https://github.com/eikendev/ttrss/actions
 
 .. image:: https://img.shields.io/pypi/status/ttrss
     :alt: Development status
