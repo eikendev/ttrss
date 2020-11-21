@@ -1,5 +1,6 @@
 PYTHON := python3
-DIR_SRC := ./ttrss
+MODULE_NAME := ttrss
+DIR_SRC := ./${MODULE_NAME}
 
 .PHONY: test
 test: lint
@@ -25,20 +26,20 @@ setup:
 
 .PHONY: clean
 clean:
-	find -type d -name '__pycache__' -exec rm -rf {} +;
-	find -type d -name '.pytest_cache' -exec rm -rf {} +;
 	find -type d -name '.mypy_cache' -exec rm -rf {} +;
+	find -type d -name '.pytest_cache' -exec rm -rf {} +;
+	find -type d -name '__pycache__' -exec rm -rf {} +;
 	rm -f ./tags
 
 .PHONY: run
 run:
-	${PYTHON} -m ttrss
+	${PYTHON} -m ${MODULE_NAME}
 
 .PHONY: tags
 tags:
 	ctags -R \
+		--extra=+f \
+		--languages=Python \
 		--sort=yes \
 		--totals=yes \
-		--languages=Python \
-		--extra=+f \
 		${DIR_SRC}
